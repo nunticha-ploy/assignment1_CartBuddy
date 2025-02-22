@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Head from 'next/head';
+import Link from 'next/link';
+
 
 export default function Home() {
   return (
@@ -19,6 +20,11 @@ export default function Home() {
             <div className={styles.card}>
               <h1>Welcome</h1>
               <h3>Let Cart Buddy Make Your Shopping easier!</h3>
+            </div>
+
+            <div className={styles.buttonContainer}>
+            <Link href="/ShoppingList"><button>View My List</button></Link>
+            <Link href="/AddItem"><button>Add New Item</button></Link>
             </div>
 
           </main>
