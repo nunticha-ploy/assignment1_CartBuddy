@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "../page.module.css";
 import Image from "next/image";
+import Link from 'next/link';
 
 function AddItem() {
     // Define state for input, message, and error
@@ -61,6 +62,12 @@ function AddItem() {
                 {message && <div>{message.map((msg, index) => (
                     <div key={index}>{msg}</div>
                 ))}</div>}
+
+                {/* create buttons which link to another pages */}
+                <div className={styles.buttonContainer}>
+                    <Link href="/ShoppingList"><button>My Shopping List</button></Link>
+                </div>
+
             </div>
         </div >
     );
