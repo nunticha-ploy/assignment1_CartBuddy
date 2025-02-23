@@ -5,6 +5,7 @@
 import { useState, useEffect } from "react";
 import styles from "../page.module.css";
 import Image from "next/image";
+import Link from 'next/link';
 
 //shopping list main function
 function ShoppingList() {
@@ -63,32 +64,40 @@ function ShoppingList() {
                     />
                 </div>
 
-                {/* Heading */}
-                <h1 className={styles.heading}>My Shopping List</h1>
+                <div className={styles.card2}>
+                    {/* Heading */}
+                    <h1 className={styles.heading}>My Shopping List</h1>
 
-                {/* Display item which add from add item page  */}
-                <div>
-                    {/* Display item or display "No items in your shopping list"  */}
-                    {/* Create new array using map  */}
-                     {/* Display and call the function"  */}
-                    {message.length > 0 ? (
-                        message.map((item, index) => (
-                            <div key={index}>
-                                <input
-                                    type="checkbox"
-                                    checked={item.includes(' (done)')}
-                                    onChange={() => handleCheckBox(index)}
-                                />
-                                <span style={{ textDecoration: item.includes(' (done)') ? 'line-through' : 'none' }}>
-                                    {item.replace(' (done)', '')}
-                                </span>
+                    {/* Display item which add from add item page  */}
+                    <div>
+                        {/* Display item or display "No items in your shopping list"  */}
+                        {/* Create new array using map  */}
+                        {/* Display and call the function"  */}
+                        {message.length > 0 ? (
+                            message.map((item, index) => (
+                                <div key={index} >
+                                    <input
+                                        type="checkbox"
+                                        checked={item.includes(' (done)')}
+                                        onChange={() => handleCheckBox(index)}
+                                    />
+                                    <span className={styles.listItem} style={{ textDecoration: item.includes(' (done)') ? 'line-through' : 'none' }}>
+                                        {item.replace(' (done)', '')}
+                                    </span>
 
-                                <button onClick={() => handleDelete(index)}>Delete</button>
-                            </div>
-                        ))
-                    ) : (
-                        <div>No items in your shopping list.</div>
-                    )}
+                                    <button className={styles.addButton} onClick={() => handleDelete(index)}>Delete</button>
+                                </div>
+                            ))
+                        ) : (
+                            <div>No items in your shopping list.</div>
+                        )}
+
+                    </div>
+                </div>
+                {/* create buttons which link to another pages */}
+                <div className={styles.smallButton}>
+                    <Link href="/AddItem"><button>Add New Item</button></Link>
+                    <Link href="/"><button>Home</button></Link>
                 </div>
             </div>
         </div >

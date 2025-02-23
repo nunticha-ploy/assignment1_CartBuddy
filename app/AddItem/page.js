@@ -69,13 +69,14 @@ function AddItem() {
 
                     {/* Display item, using map to iterate through the array */}
                     {message && <div>{message.map((msg, index) => (
-                        <div key={index}>{msg}</div>
+                        <div key={index} className={styles.listItem}>{msg}</div>
                     ))}</div>}
 
                 </div>
                 {/* create buttons which link to another pages */}
                 <div className={styles.smallButton}>
                     <Link href="/ShoppingList"><button>My Shopping List</button></Link>
+                    <Link href="/"><button>Home</button></Link>
                 </div>
             </div>
         </div >
