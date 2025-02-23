@@ -1,3 +1,33 @@
+# CartBuddy Application
+
+CartBuddy is an application designed to help you create and manage your shopping list.
+
+## Sketch and Rough Design
+- The design and layout : https://www.figma.com/design/C96mnONjkf6AMddOCGIiWZ/CartBuddy?node-id=12-6&t=KynCUu8FsFdha5Nf-1
+
+## Features
+### Home Page
+- Displays a welcome text.
+- Provides buttons to navigate to:
+  - Shopping List page
+  - Add New Item page
+
+### Add New Item Page
+- Allows users to add items to the shopping list.
+- Provides buttons to navigate to:
+  - Shopping List page
+  - Home page
+
+### Shopping List Page
+- Displays a list of shopping items.
+- Allows users to:
+  - Check items that have already been purchased using checkboxes.
+  - Delete items from the list.
+- Provides buttons to navigate to:
+  - Add New Item page
+  - Home page
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
