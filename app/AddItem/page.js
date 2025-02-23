@@ -13,16 +13,19 @@ function AddItem() {
 
     // Function triggered when the user submits the form
     const handleSubmit = (event) => {
+        //Prevents the default browser action of refreshing the page when submitting the form
         event.preventDefault();
 
-        //check user input
+        //Check user input
         if (input.trim() === '') {
             setError('Item cannot be empty!');
             setMessage('');
         } else {
+            //Converts the stored data from text to an array and adds the new item to the beginning of the array
             const prevMessages = JSON.parse(localStorage.getItem('shoppingList')) || [];
             const updatedMessages = [input, ...prevMessages];
 
+            //Saves the updated list back to local storage and converts the array into string
             localStorage.setItem('shoppingList', JSON.stringify(updatedMessages));
 
             setMessage(prev => [`"${input}" was added to your list!`, ...prev]);
