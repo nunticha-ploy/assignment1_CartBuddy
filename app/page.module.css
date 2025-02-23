@@ -41,7 +41,7 @@
   color: #053046;
 }
 
-.card h3{
+.card h3 {
   font-family: 'Arial Rounded MT Bold';
   font-style: italic;
   font-weight: 800;
@@ -51,27 +51,27 @@
   color: #053046;
 }
 
-.buttonContainer{
+.buttonContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 8%;
 }
 
-.buttonContainer button{
-width: 222px;
-height: 64px;
-background: #2B9EBA;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 32px;
-cursor: pointer;
+.buttonContainer button {
+  width: 222px;
+  height: 64px;
+  background: #2B9EBA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  cursor: pointer;
 
-font-family: 'Arial Rounded MT Bold';
-font-style: normal;
-font-weight: 800;
-font-size: 20px;
-line-height: 27px;
-color: #FDB62C;
+  font-family: 'Arial Rounded MT Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FDB62C;
 
 }
 
@@ -79,4 +79,96 @@ color: #FDB62C;
   background-color: #F98524;
   transform: scale(1.1);
   color: #ffffff;
+}
+
+.addItemPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addItemPage h1 {
+  font-family: 'Arial Rounded MT Bold';
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 55px;
+  text-align: center;
+  color: #053046;
+  margin: 4%;
+}
+
+.card2{
+width: 400px;
+height: 286px;
+background: #FDB62C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 52px;
+margin-top: 5%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.inputField {
+  background-color: #2B9EBA;              
+  font-size: 14px;   
+  font-family: 'Arial Rounded MT Bold';
+  font-style: italic;  
+  border: none;               
+  padding: 10px;             
+  border-radius: 8px; 
+  margin-bottom: 5%;
+  margin-top: -10px;
+  margin-right: 20px;
+}
+
+.inputField::placeholder{
+  color: #FDB62C;
+}
+
+.smallButton button{
+  width: 202px;
+  height: 44px;
+  background: #2B9EBA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  cursor: pointer;
+
+  font-family: 'Arial Rounded MT Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 27px;
+  color: #FDB62C;
+
+  margin-top: 15%;
+}
+
+.addButton{
+  width: 50px;
+  height: 30px;
+  background:#F98524;
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-family: 'Arial Rounded MT Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 27px;
+  color: #053046;
+
+}
+
+.smallButton button:hover{
+  background-color: #F98524;
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+.addButton:hover{
+  background-color:#053046;
+  transform: scale(1.1);
+  color:#FDB62C;
 }

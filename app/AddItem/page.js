@@ -54,28 +54,29 @@ function AddItem() {
                     />
                 </div>
 
-                {/* Heading */}
-                <h1 className={styles.heading}>Add New Item</h1>
+                <div className={styles.card2}>
+                    {/* Heading */}
+                    <h1>Add New Item</h1>
 
-                {/* Form to add a new item  */}
-                <form onSubmit={handleSubmit}>
-                    <input type="text" value={input} onChange={handleInputChange} placeholder="Enter item name" />
-                    <button type="submit" >Add</button>
-                </form>
+                    {/* Form to add a new item  */}
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" className={styles.inputField} value={input} onChange={handleInputChange} placeholder="Enter item name" />
+                        <button type="submit" className={styles.addButton} >Add</button>
+                    </form>
 
-                {/* Display error message */}
-                {error && <div>{error}</div>}
+                    {/* Display error message */}
+                    {error && <div>{error}</div>}
 
-                {/* Display item, using map to iterate through the array */}
-                {message && <div>{message.map((msg, index) => (
-                    <div key={index}>{msg}</div>
-                ))}</div>}
+                    {/* Display item, using map to iterate through the array */}
+                    {message && <div>{message.map((msg, index) => (
+                        <div key={index}>{msg}</div>
+                    ))}</div>}
 
+                </div>
                 {/* create buttons which link to another pages */}
-                <div className={styles.buttonContainer}>
+                <div className={styles.smallButton}>
                     <Link href="/ShoppingList"><button>My Shopping List</button></Link>
                 </div>
-
             </div>
         </div >
     );
