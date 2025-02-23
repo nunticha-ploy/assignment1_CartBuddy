@@ -20,7 +20,12 @@ function AddItem() {
             setError('Item cannot be empty!');
             setMessage('');
         } else {
-            setMessage(prevMessages => [`"${input}" was added to your list!`, ...prevMessages]);
+            const prevMessages = JSON.parse(localStorage.getItem('shoppingList')) || [];
+            const updatedMessages = [input, ...prevMessages];
+
+            localStorage.setItem('shoppingList', JSON.stringify(updatedMessages));
+
+            setMessage(prev => [`"${input}" was added to your list!`, ...prev]);
             setError('')
             setInput('');
         }
